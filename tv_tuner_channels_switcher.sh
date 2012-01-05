@@ -34,5 +34,6 @@ do
             ivtv-tune -f "$freq" >/dev/null 2>&1
             vlc -vvv pvr:// :pvr-device="/dev/video0" :pvr-radio-device="/dev/radio0" --deinterlace=1 >/dev/null 2>&1 &
         fi
+        curStandard="$standard"
     fi
 done
