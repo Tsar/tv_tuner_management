@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# !!! THIS SCRIPT DOES NOT WORK! AUTHORS ARY TRYING TO REMEBER, WHAT DID THEY DO TO MAKE TUNER WORK! !!!
+
 # This script installs soft to work with AverMedia MCE116 Plus (for XUbuntu 11.10)
 # Run as root or with "sudo"
 
