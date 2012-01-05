@@ -1,24 +1,40 @@
 #!/bin/bash
+chFreq[6]="111.25"
+chStandard[6]="pal-D"
+chName[6]="мтв"
+
+chFreq[7]="119.25"
+chStandard[7]="pal-D"
+chName[7]="муз"
+
+chFreq[8]="127.25"
+chStandard[8]="pal-D"
+chName[8]="8-ой"
+
+chFreq[9]="135.25"
+chStandard[9]="secam-D"
+chName[9]="культура"
+
 while true
 do
     echo 'Надо ввести номер канала'
     read chanel
     case "$chanel" in
-      11)
-      freq="151.25"
-      standard="pal-D"
-      ;;
-      56)
-      freq="511.25"
-      standard="secam-D"
-      ;;
-      "exit")
-      killall -9 vlc
-      exit 0
-      ;;
-      *)
-      echo 'неправильный номер'
-      ;;
+        11)
+            freq="151.25"
+            standard="pal-D"
+            ;;
+        56)
+            freq="511.25"
+            standard="secam-D"
+            ;;
+        "exit")
+            killall -9 vlc
+            exit 0
+            ;;
+        *)
+            echo 'неправильный номер'
+            ;;
     esac
     killall -9 vlc >/dev/null 2>&1
     # Delay
