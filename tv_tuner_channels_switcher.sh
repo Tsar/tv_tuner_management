@@ -1,6 +1,6 @@
 #!/bin/bash
 MY_DIR=`dirname $0`
-$MY_DIR/channels_arrays.sh
+source "$MY_DIR/channels_arrays.sh"
 
 curStandard=""
 
