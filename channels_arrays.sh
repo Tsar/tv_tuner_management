@@ -1,3 +1,5 @@
+#!/bin/bash
+
 chFreq[6]="111.25"
 chStandard[6]="pal-D"
 chName[6]="мтв"

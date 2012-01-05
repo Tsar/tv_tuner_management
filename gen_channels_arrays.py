@@ -65,7 +65,8 @@ CHANNELS_INFO = """6   111.25  PAL-D   мтв
 99  855.25  SECAM-D 99 росс 2"""
 
 if __name__ == "__main__":
-    with open("channels_array.txt", "w") as outputFile:
+    with open("channels_arrays.sh", "w") as outputFile:
+        outputFile.write("#!/bin/bash\n\n")
         channelsInfo = CHANNELS_INFO.split("\n")
         for channel in channelsInfo:
             if channel != "":
