@@ -1,0 +1,29 @@
+ENG:
+
+=== Scripts for AverMedia MCE116 Plus ===
+
+You need only three .sh scripts to make your AverMedia MCE116 Plus TV tuner work in Linux:
+ * tv_tuner_installer.sh         - installs necessary soft; you should once run TV tuner under Windows after installation
+ * channels_arrays.sh            - has some channels data (frequencies and etc), was generated with gen_channels_arrays.py
+ * tv_tuner_channels_switcher.sh - launches VLC and switches channels (using channels_arrays.sh, it should be in the same directory)
+
+Direct links to download three mentioned scripts:
+ * https://raw.github.com/Tsar/tv_tuner_management/master/tv_tuner_installer.sh
+ * https://raw.github.com/Tsar/tv_tuner_management/master/channels_arrays.sh
+ * https://raw.github.com/Tsar/tv_tuner_management/master/tv_tuner_channels_switcher.sh
+
+=============================================================================================================================================
+
+RUS:
+
+=== Скрипты для AverMedia MCE116 Plus ===
+
+Для того, чтобы заставить ваш ТВ-тюнер AverMedia MCE116 Plus работать под Linux, понадобятся всего три .sh скрипта:
+ * tv_tuner_installer.sh         - устанавливает необходимый софт; после установки необходимо один раз запустить ТВ-тюнер под Windows
+ * channels_arrays.sh            - содержит некоторую информацию о каналах (частоты и прочее), сгенерирован скриптом gen_channels_arrays.py
+ * tv_tuner_channels_switcher.sh - запускает VLC и переключает каналы (использует channels_arrays.sh, должны быть в одной и той же папке)
+
+Прямые ссылки для скачивания упомянутых трёх скриптов:
+ * https://raw.github.com/Tsar/tv_tuner_management/master/tv_tuner_installer.sh
+ * https://raw.github.com/Tsar/tv_tuner_management/master/channels_arrays.sh
+ * https://raw.github.com/Tsar/tv_tuner_management/master/tv_tuner_channels_switcher.sh

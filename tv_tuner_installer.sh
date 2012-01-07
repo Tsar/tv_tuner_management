@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script installs soft to work with AverMedia MCE116 Plus (for XUbuntu 11.10)
+# This script installs soft to work with AverMedia MCE116 Plus (for XUbuntu 11.10 and others)
 # Run as root or with "sudo"
 
 apt-get install ivtv-utils vlc
@@ -14,4 +14,4 @@ wget http://linuxtv.org/hg/v4l-dvb/raw-file/3919b17dc88e/linux/Documentation/vid
 perl extract_xc3028.pl
 cp xc3028-v27.fw /lib/firmware/xc3028-v27.fw
 
-echo "Now you should run TV tuner in Windows; than reboot back and use \"tv_tuner_channels_switcher.sh\""
+echo "Now you should run TV tuner in Windows once; than reboot back and use \"tv_tuner_channels_switcher.sh\""
