@@ -64,17 +64,22 @@ CHANNELS_INFO = """6   111.25  PAL-D   мтв
 
 99  855.25  SECAM-D 99 росс 2"""
 
+def ChannelLister():
+    channelsInfo = CHANNELS_INFO.split("\n")
+    for channel in channelsInfo:
+        if channel != "":
+            channel = string.replace(channel, "    ", " ")
+            channel = string.replace(channel, "   ", " ")
+            channel = string.replace(channel, "  ", " ")
+            channel = string.replace(channel, "SECAM-D", "secam-D")
+            channel = string.replace(channel, "PAL-D", "pal-D")
+            channelSplit = channel.split(" ")
+            channelName = channel[len(channelSplit[0]) + len(channelSplit[1]) + len(channelSplit[2]) + 3:]
+            yield [channelSplit[0], channelSplit[1], channelSplit[2], channelName]
+
 if __name__ == "__main__":
     with open("channels_arrays.sh", "w") as outputFile:
         outputFile.write("#!/bin/bash\n\n")
-        channelsInfo = CHANNELS_INFO.split("\n")
-        for channel in channelsInfo:
-            if channel != "":
-                channel = string.replace(channel, "    ", " ")
-                channel = string.replace(channel, "   ", " ")
-                channel = string.replace(channel, "  ", " ")
-                channel = string.replace(channel, "SECAM-D", "secam-D")
-                channel = string.replace(channel, "PAL-D", "pal-D")
-                channelSplit = channel.split(" ")
-                channelName = channel[len(channelSplit[0]) + len(channelSplit[1]) + len(channelSplit[2]) + 3:]
-                outputFile.write("chFreq[{0}]=\"{1}\"\nchStandard[{0}]=\"{2}\"\nchName[{0}]=\"{3}\"\n\n".format(channelSplit[0], channelSplit[1], channelSplit[2], channelName))
+        channelLister = ChannelLister()
+        for ch in channelLister:
+            outputFile.write("chFreq[{0}]=\"{1}\"\nchStandard[{0}]=\"{2}\"\nchName[{0}]=\"{3}\"\n\n".format(ch[0], ch[1], ch[2], ch[3]))
